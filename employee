@@ -1,0 +1,61 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+fig=plt.figure()
+df=pd.read_csv("C:/Users/admin/Downloads/cars93.csv")
+plt.title("box plot pricing")
+plt.xlabel("price")
+x=df["Price"]
+plt.boxplot(x)
+plt.show()
+
+#import five number summmary
+a=df["Price"]
+print("minimum",np.min(a))
+print("maximum",np.max(a))
+print("mean",np.mean(a))
+print("median",np.median(a))
+print("standard deviation",np.std(a))
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+fig=plt.figure()
+df=pd.read_csv("C:/Users/admin/Downloads/cars93.csv")
+model=df["MPG.city"].mode()
+print("histogram frequency",model)
+plt.title("mpg frequency")
+plt.xlabel("MPG.city")
+plt.ylabel("frequency")
+x=df["MPG.city"]
+plt.hist(x)
+plt.show()
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+fig=plt.figure()
+df=pd.read_csv("C:/Users/admin/Downloads/cars93.csv")
+plt.title("scatter plot horsepower vs mileage")
+x=df["Horsepower"]
+y=df["MPG.city"]
+plt.xlabel("Horsepower")
+plt.ylabel("MPG.city")
+plt.scatter(x,y,marker="*")
+plt.show()
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+fig=plt.figure()
+df=pd.read_csv("C:/Users/admin/Downloads/cars93.csv")
+plt.title("line chart of engine size against horse power")
+plt.xlabel("engine size")
+plt.ylabel("Horsepower")
+x=df["Fuel.tank.capacity"]
+y=df["Horsepower"]
+plt.plot(x,y)
+plt.show()
