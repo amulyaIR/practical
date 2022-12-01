@@ -1,0 +1,5 @@
+import pandas as pd
+import numpy as np
+Series_A=pd.Series([10,20,30,40,50])
+print ("minimum of Series_A=",np.min(Series_A))
+print ("maximum of Series_A=",np.max(Series_A))
